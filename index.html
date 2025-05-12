@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <title>Palindrome Checker</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Palíndromo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤓</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
@@ -10,11 +12,13 @@
   <body>
     <div class="container">
       <p id="emoji">🤔</p>
+      <form id="palindrome-form">
       <label for="text-input">Digite uma palavra para descobrir se ela é um <a href="https://pt.wikipedia.org/wiki/Pal%C3%ADndromo" target="_blank" rel="noopener noreferrer">palíndromo</a>:</label>
-      <input id="text-input" type="text" required />
+      <input id="text-input" type="text" autofocus/>
       <button id="check-btn" type="submit">Verificar</button>
+      </form>
       <p id="result">&#8203;</p>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

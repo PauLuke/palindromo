@@ -1,7 +1,10 @@
 const emoji = document.getElementById('emoji');
+const formElement = document.getElementById('palindrome-form');
 const inputElement = document.getElementById('text-input');
 const buttonElement = document.getElementById('check-btn');
 const pElement = document.getElementById('result');
+
+
 
 // Give the user a visual feedback each time a new word is checked
 const flashElement = (el) => {
@@ -42,9 +45,14 @@ const showResult = () => {
   return;
 }
 
-buttonElement.addEventListener('click', showResult);
+const handleFormSubmit = (event) => {
+    event.preventDefault(); // Prevent default form submission
+    showResult();
+};
+
+formElement.addEventListener('submit', handleFormSubmit);
 inputElement.addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
-    showResult();
+    handleFormSubmit();
   }
 });
